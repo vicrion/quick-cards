@@ -1,37 +1,19 @@
-# Camera Calibration Cheat Sheet
-
----
+# Camera Calibration
 
 ## Pin-hole Camera Model
 
-The relationship between 3D world coordinates \( X_w \) and 2D image coordinates \( x \) is:
+The relationship between 3D world coordinates and 2D image coordinates:
 
-$$
-x = K [R | t] X_w
-$$
+```math
+\begin{bmatrix} u\\ v\\ 1 \end{bmatrix} = K [R | t] \begin{bmatrix} x\\ y\\ z\\ 1 \end{bmatrix}
+```
 
 Where:  
-- \( K \): Intrinsic matrix  
-- \( [R | t] \): Extrinsic parameters (rotation and translation)  
-
----
-
-## Intrinsic Matrix \( K \):
-
-$$
-K = 
-\begin{bmatrix}
-f_x & s & c_x \\
-0 & f_y & c_y \\
-0 & 0 & 1
-\end{bmatrix}
-$$
-
-- \( f_x, f_y \): Focal lengths  
-- \( c_x, c_y \): Principal point  
-- \( s \): Skew coefficient  
-
----
+* $`K`$: Intrinsic matrix, $`K = \begin{bmatrix}f_u & s & c_u \\ 0 & f_v & c_v \\ 0 & 0 & 1 \end{bmatrix},`$
+* $`[R | t]`$: Extrinsic parameters (rotation and translation)
+* $`f_u`$, $`f_v`$: Focal lengths
+* $`c_u`$, $`c_v`$: Principal point
+* $`s`$: Skew coefficient
 
 ## Steps for Calibration:
 1. Capture multiple images of a **chessboard** pattern.  
