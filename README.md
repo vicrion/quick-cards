@@ -8,3 +8,5 @@ virtualenv venv # create
 source venv/bin/activate # active
 pip install -r requirements.txt # install requirements
 ```
+
+Note, `.vscode` has a setting to run the main when CTRL+SHIFT+B is pressed.
