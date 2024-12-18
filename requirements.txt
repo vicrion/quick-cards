@@ -1,0 +1,3 @@
+markdown
+markdown-katex
+pyside6
