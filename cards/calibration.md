@@ -4,9 +4,7 @@
 
 The relationship between 3D world coordinates and 2D image coordinates:
 
-```math
-\begin{bmatrix} u\\\ v\\\ 1 \end{bmatrix} = K [R | t] \begin{bmatrix} x\\\ y\\\ z\\\ 1 \end{bmatrix}
-```
+$$\begin{bmatrix} u\\ v\\ 1 \end{bmatrix} = K [R | t] \begin{bmatrix} x\\ y\\ z\\ 1 \end{bmatrix}$$
 
 Where:  
 * $`K`$: Intrinsic matrix, $`K = \begin{bmatrix}f_u & s & c_u \\ 0 & f_v & c_v \\ 0 & 0 & 1 \end{bmatrix},`$
